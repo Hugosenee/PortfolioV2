@@ -12,6 +12,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -29,11 +30,10 @@ body {
 }
 body #home {
   height: 100vh;
-  width: 100vw;
 }
 body #home #head {
   height: 10vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -45,52 +45,112 @@ body #home #head img {
   margin-left: 10px;
   margin-right: 10px;
 }
-body #main {
+body #home #main {
   height: 90vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
-body #main img {
+body #home #main img {
   position: relative;
-  cursor: pointer;
+  border-bottom: solid 2px var(--noir);
 }
-body #main #p {
+body #home #main #p {
   position: absolute;
   top: 280px;
 }
-body #main #p p {
+body #home #main #p p {
   font-family: "Poppins", sans-serif;
   color: var(--vert);
   font-size: 120px;
 }
-body #main #p #titreplein {
+body #home #main #p #titreplein {
   position: absolute;
   z-index: -1;
 }
-body #main #p #titrevide {
+body #home #main #p #titrevide {
   position: relative;
   color: transparent;
   -webkit-text-stroke: 2px var(--vert);
 }
-body #main .container {
+body #home #main .container {
   position: absolute;
   bottom: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-body #main .container h2 {
+body #home #main .container h2 {
   font-size: 10vw;
   position: absolute;
   transform: translate(-50%, -50%);
 }
-body #main .container h2:nth-child(1) {
+body #home #main .container h2:nth-child(1) {
   color: #6A8572;
   -webkit-text-stroke: 2px #6A8572;
 }
-body #main .container h2:nth-child(2) {
+body #home #main .container h2:nth-child(2) {
   color: #D2D2D2;
   animation: animate 4s ease-in-out infinite;
+}
+body #bottom {
+  width: 100%;
+  height: 310vh;
+  display: flex;
+  flex-direction: column;
+}
+body #bottom #navbar {
+  height: 100vh;
+  width: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+}
+body #bottom #navbar div {
+  height: 70%;
+  width: 50%;
+  border-radius: 50px;
+  border: 3px solid var(--vert);
+}
+body #bottom #navbar div ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  font-size: xxx-large;
+  color: var(--noir);
+}
+body #bottom #navbar div ul a {
+  color: var(--noir);
+}
+body #bottom #navbar.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+body #bottom #about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #bottom #projects {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #bottom #contacts {
+  width: 100%;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=build.css.map */
