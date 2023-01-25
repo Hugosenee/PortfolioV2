@@ -18,9 +18,6 @@
   scroll-behavior: smooth;
 }
 
-
-
-
 :root {
   --gris: #D2D2D2;
   --vert: #6A8572;
@@ -113,7 +110,7 @@ body {
       z-index: 1;
       div{
         height: 70%;
-        width: 50%;
+        width: 40%;
         border-radius: 50px;
         border: 3px solid var(--vert);
         ul{
@@ -140,8 +137,85 @@ body {
       width: 100%;
       height: 100vh;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      #haut{
+        height: 50%;
+        width: 100%;
+        display: flex;
+        div:nth-of-type(1){
+          height: 100%;
+          width: 10%;
+        }
+        div:nth-of-type(2){
+          height: 100%;
+          width: 45%;
+          display: flex;
+          align-items: center;
+          position: relative;
+          img{
+            width: 60%;
+            margin-left: 10%;
+          }
+          div{
+            width: 60%;
+            height: 75%;
+            bottom: 5%;
+            left: 7%;
+            background-color: transparent;
+            border: 3px solid var(--vert);
+            position: absolute;
+            z-index: -1;
+          }
+        }
+        div:nth-of-type(3){
+          height: 100%;
+          width: 45%;
+          display: flex;
+          align-items: center;
+          p{
+            text-align: center;
+            color: var(--vert);
+            font-size: x-large;
+            padding-right: 40px;
+          }
+        }
+      }
+      #milieu{
+        height: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        div{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 70%;
+          width: 50%;
+          border-top: 3px solid var(--noir);
+          border-bottom: 3px solid var(--noir);
+          h2{
+            color: var(--noir);
+            font-weight: normal;
+            font-size: xx-large;
+            text-align: center;
+          }
+        }
+      }
+      #bas{
+        height: 25%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+          color: var(--vert);
+          font-size: x-large;
+          span{
+            color: var(--noir);
+          }
+        }
+      }
     }
     #projects{
       width: 100%;

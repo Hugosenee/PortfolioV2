@@ -109,7 +109,7 @@ body #bottom #navbar {
 }
 body #bottom #navbar div {
   height: 70%;
-  width: 50%;
+  width: 40%;
   border-radius: 50px;
   border: 3px solid var(--vert);
 }
@@ -135,8 +135,85 @@ body #bottom #about {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+body #bottom #about #haut {
+  height: 50%;
+  width: 100%;
+  display: flex;
+}
+body #bottom #about #haut div:nth-of-type(1) {
+  height: 100%;
+  width: 10%;
+}
+body #bottom #about #haut div:nth-of-type(2) {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+body #bottom #about #haut div:nth-of-type(2) img {
+  width: 60%;
+  margin-left: 10%;
+}
+body #bottom #about #haut div:nth-of-type(2) div {
+  width: 60%;
+  height: 75%;
+  bottom: 5%;
+  left: 7%;
+  background-color: transparent;
+  border: 3px solid var(--vert);
+  position: absolute;
+  z-index: -1;
+}
+body #bottom #about #haut div:nth-of-type(3) {
+  height: 100%;
+  width: 45%;
+  display: flex;
+  align-items: center;
+}
+body #bottom #about #haut div:nth-of-type(3) p {
+  text-align: center;
+  color: var(--vert);
+  font-size: x-large;
+  padding-right: 40px;
+}
+body #bottom #about #milieu {
+  height: 25%;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+body #bottom #about #milieu div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 50%;
+  border-top: 3px solid var(--noir);
+  border-bottom: 3px solid var(--noir);
+}
+body #bottom #about #milieu div h2 {
+  color: var(--noir);
+  font-weight: normal;
+  font-size: xx-large;
+  text-align: center;
+}
+body #bottom #about #bas {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #bottom #about #bas p {
+  color: var(--vert);
+  font-size: x-large;
+}
+body #bottom #about #bas p span {
+  color: var(--noir);
 }
 body #bottom #projects {
   width: 100%;
