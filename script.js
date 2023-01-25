@@ -58,3 +58,7 @@ window.addEventListener("scroll", function() {
         iconprojects.style.color = "var(--noir)"
     }
 });
+
+// slider
+
+

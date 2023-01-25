@@ -222,12 +222,133 @@ body #bottom #projects {
   justify-content: center;
   align-items: center;
 }
+body #bottom #projects div {
+  width: 50%;
+  height: 100%;
+}
+body #bottom #projects div div:nth-of-type(1) {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #bottom #projects div div:nth-of-type(1) div:nth-of-type(1) {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  margin-left: 150px;
+  border-top: 3px solid var(--noir);
+  border-bottom: 3px solid var(--noir);
+}
+body #bottom #projects div div:nth-of-type(1) div:nth-of-type(1) h2 {
+  color: var(--noir);
+  font-weight: normal;
+  font-size: xx-large;
+  text-align: center;
+}
+body #bottom #projects div div:nth-of-type(2) {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+body #bottom #projects div div:nth-of-type(2) button {
+  height: 70px;
+  width: 170px;
+  background-color: transparent;
+  border: 3px solid var(--vert);
+  color: var(--vert);
+}
+body #bottom #projects div div:nth-of-type(2) button:hover {
+  background-color: var(--vert);
+  color: var(--noir);
+}
 body #bottom #contacts {
   width: 100%;
   height: 110vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+body #bottom #contacts #hautcontact {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+body #bottom #contacts #hautcontact div {
+  width: 20%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  border-top: 3px solid var(--noir);
+  border-bottom: 3px solid var(--noir);
+}
+body #bottom #contacts #hautcontact div h2 {
+  color: var(--noir);
+  font-weight: normal;
+  font-size: xx-large;
+  text-align: center;
+}
+body #bottom #contacts #bascontact {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+body #bottom #contacts #bascontact #reseaux {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  border-right: 1px solid var(--noir);
+}
+body #bottom #contacts #bascontact #reseaux div {
+  height: 30%;
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 20px;
+  align-items: center;
+}
+body #bottom #contacts #bascontact #reseaux div img {
+  width: 60px;
+  height: 60px;
+}
+body #bottom #contacts #bascontact #reseaux div p {
+  font-size: x-large;
+}
+body #bottom #contacts #bascontact #buttons {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15%;
+  border-left: 1px solid var(--noir);
+}
+body #bottom #contacts #bascontact #buttons button {
+  height: 70px;
+  width: 40%;
+  background-color: transparent;
+  border: 3px solid var(--vert);
+  color: var(--vert);
+  font-size: large;
+}
+body #bottom #contacts #bascontact #buttons button:hover {
+  background-color: var(--vert);
+  color: var(--noir);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=build.css.map */
