@@ -25,9 +25,6 @@
   z-index: 2;
 }
 
-body {
-  background-color: var(--gris);
-}
 body #home {
   height: 100vh;
 }
@@ -100,7 +97,7 @@ body #bottom {
 }
 body #bottom #navbar {
   height: 100vh;
-  width: 10vw;
+  width: 7vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +108,7 @@ body #bottom #navbar div {
   height: 70%;
   width: 40%;
   border-radius: 50px;
-  border: 3px solid var(--vert);
+  border: 2px solid var(--vert);
 }
 body #bottom #navbar div ul {
   height: 100%;
@@ -120,7 +117,7 @@ body #bottom #navbar div ul {
   justify-content: space-around;
   list-style: none;
   align-items: center;
-  font-size: xxx-large;
+  font-size: xx-large;
   color: var(--noir);
 }
 body #bottom #navbar div ul a {
@@ -222,49 +219,163 @@ body #bottom #projects {
   justify-content: center;
   align-items: center;
 }
-body #bottom #projects div {
+body #bottom #projects #MyWorkText {
   width: 50%;
   height: 100%;
 }
-body #bottom #projects div div:nth-of-type(1) {
+body #bottom #projects #MyWorkText #MyWork {
   width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body #bottom #projects div div:nth-of-type(1) div:nth-of-type(1) {
+body #bottom #projects #MyWorkText #MyWork div {
   width: 50%;
   height: 30%;
   display: flex;
   margin-left: 150px;
   border-top: 3px solid var(--noir);
   border-bottom: 3px solid var(--noir);
+  justify-content: center;
+  align-items: center;
 }
-body #bottom #projects div div:nth-of-type(1) div:nth-of-type(1) h2 {
+body #bottom #projects #MyWorkText #MyWork div h2 {
   color: var(--noir);
   font-weight: normal;
   font-size: xx-large;
   text-align: center;
 }
-body #bottom #projects div div:nth-of-type(2) {
+body #bottom #projects #MyWorkText #btnWork {
   width: 100%;
   height: 50%;
   display: flex;
   justify-content: center;
-  margin-left: 10%;
   margin-top: 10%;
 }
-body #bottom #projects div div:nth-of-type(2) button {
+body #bottom #projects #MyWorkText #btnWork button {
   height: 70px;
   width: 170px;
   background-color: transparent;
   border: 3px solid var(--vert);
   color: var(--vert);
+  margin-left: 20%;
 }
-body #bottom #projects div div:nth-of-type(2) button:hover {
+body #bottom #projects #MyWorkText #btnWork button:hover {
   background-color: var(--vert);
   color: var(--noir);
+}
+body #bottom #projects #slider {
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+body #bottom #projects #slider .vue {
+  opacity: 1 !important;
+  z-index: 4 !important;
+  box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75) !important;
+}
+body #bottom #projects #slider .prev {
+  z-index: 3 !important;
+  transform: translate(-60%, -50%) rotate(25deg) !important;
+}
+body #bottom #projects #slider .next {
+  z-index: 2 !important;
+  transform: translate(-40%, -50%) rotate(25deg) !important;
+}
+body #bottom #projects #slider .card_container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+body #bottom #projects #slider .card_container .card {
+  width: 25vw;
+  height: 100%;
+  background-color: var(--gris);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  z-index: -1;
+  color: white;
+  opacity: 0.58;
+  min-width: 250px;
+  border: 3px solid var(--vert);
+}
+body #bottom #projects #slider .card_container .card .animate {
+  animation: animate-unselect 300ms;
+}
+body #bottom #projects #slider .card_container .card div {
+  position: relative;
+  top: 10%;
+  width: 80%;
+  margin: auto;
+  height: 90%;
+}
+body #bottom #projects #slider .card_container .card div img {
+  width: 100%;
+  height: 45%;
+  background-color: #9B87FE;
+  border: 0;
+  object-fit: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+body #bottom #projects #slider .card_container .card div p {
+  font-size: 80%;
+  margin-top: 5%;
+  text-align: center;
+  color: var(--vert);
+}
+body #bottom #projects #slider .card_container .card div h4 {
+  color: #9B87FE;
+  margin-top: 5%;
+  text-align: center;
+  color: var(--noir);
+}
+body #bottom #projects #slider .card_container .button-container {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  z-index: 100;
+}
+body #bottom #projects #slider .card_container .button-container .button {
+  color: var(--vert);
+  font-size: 32px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0.5;
+  transition: all 300ms ease-in-out;
+}
+body #bottom #projects #slider .card_container .button-container .button:hover {
+  opacity: 1;
+}
+body #bottom #projects #slider .card_container .button-container .button:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: #CBBDDB;
+  z-index: -99;
+}
+body #bottom #projects #slider .card_container .button-container .button:nth-child(1) {
+  float: left;
+}
+body #bottom #projects #slider .card_container .button-container .button:nth-child(2) {
+  float: right;
 }
 body #bottom #contacts {
   width: 100%;
