@@ -153,7 +153,13 @@ const mail = document.getElementById('mail')
 const displaymail = document.getElementById('maildisplay')
 const mailclose = document.getElementById('mailclose')
 
+const emailcontact = document.getElementById('emailcontact')
+
 mail.addEventListener('click', () => {
+    displaymail.classList.add('showMail')
+})
+
+emailcontact.addEventListener('click', () => {
     displaymail.classList.add('showMail')
 })
 
