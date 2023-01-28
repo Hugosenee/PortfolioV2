@@ -127,22 +127,41 @@ const burgerclose = document.getElementById('burgerclose')
 const lienBurger = document.querySelectorAll('.aBurger')
 
 menuburger.addEventListener('click', () => {
-    displayburger.classList.add('active')
+    displayburger.classList.add('showBurger')
 })
 
 burgerclose.addEventListener('click', () => {
-    Close()
+    CloseBurger()
 })
 
 lienBurger.forEach( lien => {
     lien.addEventListener('click', () => {
-        Close()
+        CloseBurger()
     })
 })
 
-const Close = () => {
+const CloseBurger = () => {
 
-    displayburger.classList.remove('active')
-    displayburger.classList.add('remove')
+    displayburger.classList.remove('showBurger')
+    displayburger.classList.add('removeBurger')
 
+}
+
+// Mail
+
+const mail = document.getElementById('mail')
+const displaymail = document.getElementById('maildisplay')
+const mailclose = document.getElementById('mailclose')
+
+mail.addEventListener('click', () => {
+    displaymail.classList.add('showMail')
+})
+
+mailclose.addEventListener('click', () => {
+    closeMail()
+})
+
+const closeMail = () => {
+    displaymail.classList.remove('showMail')
+    displaymail.classList.add('removeMail')
 }
