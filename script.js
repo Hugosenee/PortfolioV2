@@ -118,3 +118,31 @@ const toSlide = number => {
     cards[next].classList.add("next");
 }
 
+// menu burger
+
+const menuburger = document.getElementById('burger')
+const displayburger = document.getElementById('burgerdisplay')
+const burgerclose = document.getElementById('burgerclose')
+
+const lienBurger = document.querySelectorAll('.aBurger')
+
+menuburger.addEventListener('click', () => {
+    displayburger.classList.add('active')
+})
+
+burgerclose.addEventListener('click', () => {
+    Close()
+})
+
+lienBurger.forEach( lien => {
+    lien.addEventListener('click', () => {
+        Close()
+    })
+})
+
+const Close = () => {
+
+    displayburger.classList.remove('active')
+    displayburger.classList.add('remove')
+
+}

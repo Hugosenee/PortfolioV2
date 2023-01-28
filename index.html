@@ -10,9 +10,19 @@
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
 </head>
 <body>
+    <section id="burgerdisplay">
+        <div id="hautburger">
+            <img id="burgerclose" src="images/close.png" alt="close">
+        </div>
+        <div id="mainburger">
+            <a class="aBurger" href="#about">ABOUT</a>
+            <a class="aBurger" href="#projects">PROJECTS</a>
+            <a class="aBurger" href="#contact">CONTACT</a>
+        </div>
+    </section>
     <section id="home">
         <div id="head">
-            <img src="images/menu.png" alt="menu">
+            <img id="burger" src="images/menu.png" alt="menu">
             <img src="images/mail.png" alt="mail">
         </div>
         <div id="main">
@@ -34,7 +44,7 @@
                     <li><a href="#home"><iconify-icon icon="ic:round-home"></iconify-icon></a></li>
                     <li><a href="#about"><iconify-icon id="iconabout" icon="mdi:account"></iconify-icon></a></li>
                     <li><a href="#projects"><iconify-icon id="iconprojects" icon="ph:code-bold"></iconify-icon></a></li>
-                    <li><a href="#contacts"><iconify-icon id="iconcontact" icon="material-symbols:phone-enabled"></iconify-icon></a>    </li>
+                    <li><a href="#contact"><iconify-icon id="iconcontact" icon="material-symbols:phone-enabled"></iconify-icon></a>    </li>
                 </ul>
             </div>
         </div>
@@ -105,7 +115,7 @@
             </div>
         </div>
         <div id="contacts">
-            <h2>Contacts</h2>
+            <h2 id="contact">Contacts</h2>
         </div>
     </section>
     <script src="script.js"></script>
