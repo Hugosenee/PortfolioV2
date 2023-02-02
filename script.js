@@ -18,10 +18,8 @@ let section = document.getElementById("bottom");
 window.addEventListener("scroll", function() {
     if (window.scrollY >= section.offsetTop) {
         navbar.classList.add("sticky");
-        navbar.classList.add("active")
     } else {
         navbar.classList.remove("sticky");
-        navbar.classList.remove("active");
     }
 });
 
