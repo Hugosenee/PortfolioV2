@@ -620,9 +620,18 @@ body #bottom #contacts #bascontact #droitecontact div:active {
   width: 30%;
 }
 #bodyProjects header #retourHome img {
-  width: 60px;
-  margin-left: 10px;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
   margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.45s;
+  cursor: pointer;
+}
+#bodyProjects header #retourHome img:hover {
+  transform: scale(1.15);
+  cursor: pointer;
 }
 #bodyProjects #titreprojects {
   height: 15vh;
@@ -692,13 +701,36 @@ body #bottom #contacts #bascontact #droitecontact div:active {
   justify-content: space-around;
   gap: 20px;
   position: relative;
+  cursor: pointer;
 }
-#bodyProjects .droite .voirplus p {
+#bodyProjects .droite .voirplus div {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  position: relative;
+  transition: 0.3s;
+}
+#bodyProjects .droite .voirplus div img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 30px;
+  z-index: 1;
+  transition: 0.3s;
+}
+#bodyProjects .droite .voirplus div p {
   font-size: x-large;
+  z-index: 2;
+  margin-left: 10px;
+  border-radius: 100%;
 }
-#bodyProjects .droite .voirplus img {
-  width: 60px;
-  height: 60px;
+#bodyProjects .droite .voirplus div:hover {
+  background-color: #E1E1E5;
+}
+#bodyProjects .droite .voirplus div:hover img {
+  transform: translate(40%);
 }
 
 /*# sourceMappingURL=build.css.map */
