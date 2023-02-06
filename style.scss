@@ -55,6 +55,7 @@
   opacity: 0;
   transform:translateY(-30px);
 }
+
 .reveal-visible{
   opacity: 1;
   transform:translateY(0);
@@ -393,7 +394,7 @@ body {
           margin-top: 10%;
           button{
             height: 70px;
-            width: 170px;
+            width: 230px;
             background-color: transparent;
             border: 2px solid var(--vert);
             border-radius: 7px;
@@ -620,6 +621,99 @@ body {
             transform : scale(0.97);
           }
         }
+      }
+    }
+  }
+}
+
+// page Projects
+
+#bodyProjects{
+  header{
+    height: 10vh;
+    display: flex;
+    #retourHome{
+      width: 30%;
+      img{
+        width: 60px;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+    }
+  }
+  #titreprojects{
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+      font-size: 100px;
+      color: var(--vert);
+      position: relative;
+      z-index: 2;
+    }
+    hr{
+      position: absolute;
+      z-index: 1;
+      top: 190px;
+      left: 44%;
+      width: 300px;
+      border: 2px solid var(--noir);
+    }
+  }
+  .projectsdisplay{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+  .imgproject{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 90%;
+    }
+  }
+  .droite{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2{
+      text-align: center;
+      color: var(--noir);
+      font-size: xx-large;
+      margin-top: 30px;
+      height: 35%;
+    }
+    .imgdroite{
+      height: 20%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      img{
+        width: 10%;
+      }
+    }
+    .voirplus{
+      height: 45%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      position: relative;
+      p{
+        font-size: x-large;
+      }
+      img{
+        width: 60px;
+        height: 60px;
       }
     }
   }

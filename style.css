@@ -387,7 +387,7 @@ body #bottom #projects #MyWorkText #btnWork {
 }
 body #bottom #projects #MyWorkText #btnWork button {
   height: 70px;
-  width: 170px;
+  width: 230px;
   background-color: transparent;
   border: 2px solid var(--vert);
   border-radius: 7px;
@@ -610,6 +610,95 @@ body #bottom #contacts #bascontact #droitecontact div:hover p {
 }
 body #bottom #contacts #bascontact #droitecontact div:active {
   transform: scale(0.97);
+}
+
+#bodyProjects header {
+  height: 10vh;
+  display: flex;
+}
+#bodyProjects header #retourHome {
+  width: 30%;
+}
+#bodyProjects header #retourHome img {
+  width: 60px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+#bodyProjects #titreprojects {
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#bodyProjects #titreprojects h1 {
+  font-size: 100px;
+  color: var(--vert);
+  position: relative;
+  z-index: 2;
+}
+#bodyProjects #titreprojects hr {
+  position: absolute;
+  z-index: 1;
+  top: 190px;
+  left: 44%;
+  width: 300px;
+  border: 2px solid var(--noir);
+}
+#bodyProjects .projectsdisplay {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+#bodyProjects .imgproject {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyProjects .imgproject img {
+  width: 90%;
+}
+#bodyProjects .droite {
+  width: 40%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#bodyProjects .droite h2 {
+  text-align: center;
+  color: var(--noir);
+  font-size: xx-large;
+  margin-top: 30px;
+  height: 35%;
+}
+#bodyProjects .droite .imgdroite {
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#bodyProjects .droite .imgdroite img {
+  width: 10%;
+}
+#bodyProjects .droite .voirplus {
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  position: relative;
+}
+#bodyProjects .droite .voirplus p {
+  font-size: x-large;
+}
+#bodyProjects .droite .voirplus img {
+  width: 60px;
+  height: 60px;
 }
 
 /*# sourceMappingURL=style.css.map */
