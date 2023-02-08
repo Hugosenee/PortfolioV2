@@ -616,10 +616,10 @@ body #bottom #contacts #bascontact #droitecontact div:active {
   height: 10vh;
   display: flex;
 }
-#bodyProjects header #retourHome {
+#bodyProjects header .retourHome {
   width: 30%;
 }
-#bodyProjects header #retourHome img {
+#bodyProjects header .retourHome img {
   width: 70px;
   height: 70px;
   padding: 10px;
@@ -629,7 +629,7 @@ body #bottom #contacts #bascontact #droitecontact div:active {
   transition: 0.45s;
   cursor: pointer;
 }
-#bodyProjects header #retourHome img:hover {
+#bodyProjects header .retourHome img:hover {
   transform: scale(1.15);
   cursor: pointer;
 }
@@ -677,6 +677,10 @@ body #bottom #contacts #bascontact #droitecontact div:active {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+#bodyProjects .droite a {
+  color: var(--noir);
+  text-decoration: none;
 }
 #bodyProjects .droite h2 {
   text-align: center;
@@ -730,6 +734,135 @@ body #bottom #contacts #bascontact #droitecontact div:active {
   background-color: #E1E1E5;
 }
 #bodyProjects .droite .voirplus div:hover img {
+  transform: translate(40%);
+}
+
+header {
+  height: 10vh;
+  display: flex;
+}
+header .retourHome {
+  width: 30%;
+}
+header .retourHome img {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.45s;
+  cursor: pointer;
+}
+header .retourHome img:hover {
+  transform: scale(1.15);
+  cursor: pointer;
+}
+
+.singleMovieDisplay {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+}
+.singleMovieDisplay div {
+  width: 80%;
+  height: 95%;
+  display: flex;
+}
+.singleMovieDisplay div .gaucheProject {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.singleMovieDisplay div .gaucheProject div:nth-of-type(1) {
+  width: 100%;
+  height: 55%;
+  margin-left: 10%;
+}
+.singleMovieDisplay div .gaucheProject div:nth-of-type(1) img {
+  width: 80%;
+  height: 100%;
+}
+.singleMovieDisplay div .gaucheProject div:nth-of-type(2) {
+  width: 100%;
+  height: 10%;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+}
+.singleMovieDisplay div .gaucheProject div:nth-of-type(3) {
+  width: 80%;
+  height: 25%;
+  background-color: lightgray;
+  color: var(--vert);
+  margin-left: 10%;
+}
+.singleMovieDisplay div .gaucheProject div:nth-of-type(4) {
+  width: 100%;
+  height: 10%;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+.singleMovieDisplay div .gaucheProject div:nth-of-type(4) img {
+  width: 60px;
+  height: 60px;
+}
+.singleMovieDisplay div .droiteProject {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(1) {
+  width: 100%;
+  height: 85%;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) {
+  width: 100%;
+  height: 15%;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) .voirplus {
+  height: 45%;
+  gap: 20px;
+  margin-top: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) .voirplus a {
+  color: var(--noir);
+  text-decoration: none;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) .voirplus div {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  position: relative;
+  transition: 0.3s;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) .voirplus div img {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 30px;
+  z-index: 1;
+  transition: 0.3s;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) .voirplus div p {
+  font-size: x-large;
+  z-index: 2;
+  margin-left: 10px;
+  border-radius: 100%;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) .voirplus div:hover {
+  background-color: #E1E1E5;
+}
+.singleMovieDisplay div .droiteProject div:nth-of-type(2) .voirplus div:hover img {
   transform: translate(40%);
 }
 
