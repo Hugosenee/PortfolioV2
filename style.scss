@@ -46,6 +46,10 @@
   right: 0 ;
   transition: right 0.6s ease-in-out;
   position: fixed ;
+
+  @media screen and (max-width: 450px){
+    visibility: visible;
+  }
 }
 
 .removeMail {
@@ -53,6 +57,9 @@
   right: -110%;
   position: absolute;
 
+  @media screen and (max-width: 450px){
+    visibility: hidden;
+  }
 }
 
 .reveal{
