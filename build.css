@@ -133,16 +133,6 @@ body #maildisplay #hautmail span:hover {
   color: var(--gris);
   cursor: pointer;
 }
-body #maildisplay #mainmail {
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-body #maildisplay #mainmail span {
-  font-size: 70px;
-  color: var(--gris);
-}
 body #home {
   height: 100vh;
 }
