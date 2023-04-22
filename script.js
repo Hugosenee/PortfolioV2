@@ -57,64 +57,7 @@ window.addEventListener("scroll", function() {
     }
 });
 
-// slider
 
-const container = document.querySelector(".card_container");
-const cards = document.querySelectorAll(".card");
-
-document.getElementById("left").addEventListener("click", function() {
-    toPrevious()
-})
-
-document.getElementById("right").addEventListener("click", function() {
-    toNext()
-})
-
-let current = 0;
-let prev = 1;
-let next = 2;
-
-const toPrevious = () => {
-
-    if (current > 0) {
-        toSlide(current - 1)
-    } else {
-        toSlide(cards.length - 1)
-    }
-}
-
-const toNext = () => {
-
-    if (current < cards.length - 1) {
-        toSlide(current + 1)
-    } else {
-        toSlide(0)
-    }
-}
-
-const toSlide = number => {
-    current = number;
-    prev = current - 1;
-    next = current + 1;
-
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].classList.remove("vue");
-        cards[i].classList.remove("prev");
-        cards[i].classList.remove("next");
-    }
-
-    if (next == cards.length) {
-        next = 0;
-    }
-
-    if (prev == -1) {
-        prev = cards.length - 1;
-    }
-
-    cards[current].classList.add("vue");
-    cards[prev].classList.add("prev");
-    cards[next].classList.add("next");
-}
 
 // menu burger
 
@@ -125,25 +68,22 @@ const burgerclose = document.getElementById('burgerclose')
 const lienBurger = document.querySelectorAll('.aBurger')
 
 menuburger.addEventListener('click', () => {
-    displayburger.classList.add('showBurger')
+    displayburger.classList.toggle('showBurger')
+    displayburger.classList.toggle('removeBurger')
+
 })
 
 burgerclose.addEventListener('click', () => {
-    CloseBurger()
+    displayburger.classList.toggle('showBurger')
+    displayburger.classList.toggle('removeBurger')
 })
 
 lienBurger.forEach( lien => {
     lien.addEventListener('click', () => {
-        CloseBurger()
+        displayburger.classList.toggle('showBurger')
+        displayburger.classList.toggle('removeBurger')
     })
 })
-
-const CloseBurger = () => {
-
-    displayburger.classList.remove('showBurger')
-    displayburger.classList.add('removeBurger')
-
-}
 
 // Mail
 
@@ -151,24 +91,20 @@ const mail = document.getElementById('mail')
 const displaymail = document.getElementById('maildisplay')
 const mailclose = document.getElementById('mailclose')
 
-const emailcontact = document.getElementById('emailcontact')
 
 mail.addEventListener('click', () => {
-    displaymail.classList.add('showMail')
+    displaymail.classList.toggle('showMail')
+    displaymail.classList.toggle('removeMail')
+
 })
 
-emailcontact.addEventListener('click', () => {
-    displaymail.classList.add('showMail')
-})
 
 mailclose.addEventListener('click', () => {
-    closeMail()
+    displaymail.classList.toggle('showMail')
+    displaymail.classList.toggle('removeMail')
 })
 
-const closeMail = () => {
-    displaymail.classList.remove('showMail')
-    displaymail.classList.add('removeMail')
-}
+
 
 // apparaitre div scroll
 

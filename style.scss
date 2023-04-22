@@ -28,27 +28,31 @@
 
 .zoom {
   z-index: 2 ;
-
 }
 
 .showBurger {
-  left: 0 !important;
+  left: 0 ;
   transition: left 0.6s ease-in-out;
-  position: fixed !important;
+  position: fixed ;
 }
 
 .removeBurger {
   transition: left 0.4s ease-in-out;
+  position: absolute;
+  left: -110%;
 }
 
 .showMail {
-  right: 0 !important;
+  right: 0 ;
   transition: right 0.6s ease-in-out;
-  position: fixed !important;
+  position: fixed ;
 }
 
 .removeMail {
   transition: right 0.4s ease-in-out;
+  right: -110%;
+  position: absolute;
+
 }
 
 .reveal{
@@ -75,19 +79,20 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--vert);
-    position: absolute;
     z-index: 5;
-    left: -110%;
     #hautburger{
       height: 10vh;
       width: 100%;
-      img {
-        width: 70px;
-        height: 70px;
-        padding: 10px;
-        margin-top: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
+      span{
+        font-size: 70px;
+        cursor: pointer;
+        margin-left: 25px;
+        color: transparent;
+        transition: 0.2s;
+        -webkit-text-stroke: 1px var(--gris);
+      }
+      span:hover{
+        color: var(--gris);
         cursor: pointer;
       }
     }
@@ -117,21 +122,22 @@ body {
     width: 100%;
     height: 100vh;
     background-color: var(--vert);
-    position: absolute;
     z-index: 5;
-    right: -110%;
     #hautmail{
       width: 100%;
       height: 10vh;
       display: flex;
       justify-content: end;
-      img{
-        width: 70px;
-        height: 70px;
-        padding: 10px;
-        margin-top: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
+      span{
+        font-size: 70px;
+        cursor: pointer;
+        margin-right: 25px;
+        color: transparent;
+        transition: 0.2s;
+        -webkit-text-stroke: 1px var(--gris);
+      }
+      span:hover{
+        color: var(--gris);
         cursor: pointer;
       }
     }
@@ -173,7 +179,23 @@ body {
         p{
           font-family: "Poppins", sans-serif;
           color: var(--vert);
-          font-size: 120px;
+          font-size: 110px;
+
+          @media screen and (max-width: 850px){
+            font-size: 80px;
+          }
+
+          @media screen and (max-width: 600px){
+            font-size: 65px;
+          }
+
+          @media screen and (max-width: 400px){
+            font-size: 50px;
+          }
+
+
+
+
         }
         #titreplein{
           position: absolute;
@@ -191,9 +213,30 @@ body {
         left: 50%;
         transform: translate(-50%, -50%);
         h2 {
-          font-size: 10vw;
+          font-size: 150px;
           position: absolute;
           transform: translate(-50%, -50%);
+
+          @media screen and (max-width: 850px){
+            font-size: 120px;
+          }
+
+          @media screen and (max-width: 700px){
+            font-size: 100px;
+          }
+
+          @media screen and (max-width: 600px){
+            font-size: 80px;
+          }
+
+          @media screen and (max-width: 480px){
+            font-size: 65px;
+          }
+
+          @media screen and (max-width: 375px){
+            font-size: 55px;
+          }
+
         }
         h2:nth-child(1) {
           color: #6A8572;
@@ -219,6 +262,10 @@ body {
       justify-content: center;
       position: absolute;
       z-index: 1;
+
+      @media screen and (max-width: 750px){
+        display: none;
+      }
       div{
         height: 70%;
         width: 40%;
@@ -233,6 +280,10 @@ body {
           align-items: center;
           font-size: xx-large;
           color: var(--noir);
+
+          @media screen and (max-width: 1100px){
+            font-size: large;
+          }
           a {
             color: var(--noir);
           }
@@ -249,110 +300,6 @@ body {
       height: 100vh;
       display: flex;
       flex-direction: column;
-      #haut{
-        height: 50%;
-        width: 100%;
-        display: flex;
-        div:nth-of-type(1){
-          height: 100%;
-          width: 10%;
-        }
-        div:nth-of-type(2){
-          height: 100%;
-          width: 45%;
-          display: flex;
-          align-items: center;
-          position: relative;
-          img{
-            width: 60%;
-            margin-left: 10%;
-          }
-          div{
-            width: 60%;
-            height: 75%;
-            bottom: 5%;
-            left: 7%;
-            background-color: transparent;
-            border: 3px solid var(--vert);
-            position: absolute;
-            z-index: -1;
-          }
-        }
-        div:nth-of-type(3){
-          height: 100%;
-          width: 45%;
-          display: flex;
-          align-items: center;
-          p{
-            text-align: center;
-            color: var(--vert);
-            font-size: x-large;
-            padding-right: 40px;
-          }
-        }
-      }
-      #milieu{
-        height: 25%;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        div{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 70%;
-          width: 50%;
-          border-top: 3px solid var(--noir);
-          border-bottom: 3px solid var(--noir);
-          h2{
-            color: var(--noir);
-            font-weight: normal;
-            font-size: xx-large;
-            text-align: center;
-          }
-        }
-      }
-      #bas{
-        height: 25%;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        p{
-          color: var(--vert);
-          font-size: x-large;
-          span{
-            color: var(--noir);
-          }
-        }
-        div{
-          width: 20%;
-          height: 45%;
-          border: 2px solid var(--vert);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 7px;
-          transition: 0.5s;
-          p{
-            color: var(--vert);
-            font-size: larger;
-          }
-        }
-        div:hover{
-          background-color: var(--vert);
-          color: var(--noir);
-          transform : scale(1.05);
-          cursor: pointer;
-          p {
-            color: var(--noir);
-          }
-        }
-        div:active{
-          transform : scale(0.97);
-        }
-      }
     }
     #projects{
       width: 100%;
@@ -360,169 +307,6 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      #MyWorkText{
-        width: 50%;
-        height: 100%;
-        #MyWork{
-          width: 100%;
-          height: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          div{
-            width: 50%;
-            height: 30%;
-            display: flex;
-            margin-left: 150px;
-            border-top: 3px solid var(--noir);
-            border-bottom: 3px solid var(--noir);
-            justify-content: center;
-            align-items: center;
-            h2{
-              color: var(--noir);
-              font-weight: normal;
-              font-size: xx-large;
-              text-align: center;
-            }
-          }
-        }
-        #btnWork{
-          width: 100%;
-          height: 50%;
-          display: flex;
-          justify-content: center;
-          margin-top: 10%;
-          button{
-            height: 70px;
-            width: 230px;
-            background-color: transparent;
-            border: 2px solid var(--vert);
-            border-radius: 7px;
-            transition: 0.5s;
-            color: var(--vert);
-            margin-left: 20%;
-          }
-          button:hover{
-            background-color: var(--vert);
-            color: var(--noir);
-            transform : scale(1.05);
-            cursor: pointer;
-          }
-        }
-      }
-      #slider{
-        height: 100%;
-        width: 50%;
-        position: relative;
-        .vue {
-          opacity: 1 !important;
-          z-index: 4 !important;
-          box-shadow: 0px 0px 105px -35px rgba(0, 0, 0, 0.75) !important;
-        }
-        .prev {
-          z-index: 3 !important;
-          transform: translate(-60%, -50%) rotate(25deg) !important;
-        }
-        .next {
-          z-index: 2 !important;
-          transform: translate(-40%, -50%) rotate(25deg) !important;
-        }
-        .card_container {
-          position: relative;
-          top: 50%;
-          left: 50%;
-          height: 80%;
-          transform: translate(-50%, -50%);
-          user-select: none;
-
-          .card {
-            width: 25vw;
-            height: 100%;
-            background-color: var(--gris);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 25px;
-            overflow: hidden;
-            transition: all 300ms ease-in-out;
-            z-index: -1;
-            color: white;
-            opacity: 0.58;
-            min-width: 250px;
-            border: 3px solid var(--vert);
-            .animate {
-              animation: animate-unselect 300ms;
-            }
-            div {
-              position: relative;
-              top: 10%;
-              width: 80%;
-              margin: auto;
-              height: 90%;
-              img {
-                width: 100%;
-                height: 45%;
-                border: 0;
-                object-fit: cover;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-              }
-              p {
-                font-size: 80%;
-                margin-top: 5%;
-                text-align: center;
-                color: var(--vert);
-              }
-              h4 {
-                color: #9B87FE;
-                margin-top: 5%;
-                text-align: center;
-                color: var(--noir);
-              }
-            }
-          }
-          .button-container {
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 50%;
-            height: 50%;
-            z-index: 100;
-            .button {
-              color: var(--vert);
-              font-size: 32px;
-              cursor: pointer;
-              position: relative;
-              opacity: 0.5;
-              transition: all 300ms ease-in-out;
-            }
-            .button:hover {
-              opacity: 1;
-            }
-            .button:before {
-              content: "";
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              width: 50px;
-              height: 50px;
-              border-radius: 50%;
-              color: #CBBDDB;
-              z-index: -99;
-            }
-            .button:nth-child(1) {
-              float: left;
-            }
-            .button:nth-child(2) {
-              float: right;
-            }
-          }
-        }
-
-      }
     }
     #contacts {
       height: 100vh;
@@ -601,7 +385,7 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
-            transition:0.5s;
+            transition:0.4s;
             border-radius: 7px;
             p{
               color: var(--vert);
@@ -609,16 +393,12 @@ body {
             }
           }
           div:hover{
-            background-color: var(--vert);
-            color: var(--noir);
-            transform : scale(1.05);
+            box-shadow: inset 310px 0 0 0 var(--vert);
+            border: 2px solid var(--vert);
             cursor: pointer;
-            p {
+            p{
               color: var(--noir);
             }
-          }
-          div:active{
-            transform : scale(0.97);
           }
         }
       }
