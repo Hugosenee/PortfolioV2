@@ -62,7 +62,7 @@
 
 body {
   background-color: var(--gris);
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body #burgerdisplay {
   width: 100%;
