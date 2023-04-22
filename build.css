@@ -69,6 +69,7 @@ body #burgerdisplay {
   height: 100vh;
   background-color: var(--vert);
   z-index: 5;
+  overflow-x: hidden;
 }
 body #burgerdisplay #hautburger {
   height: 10vh;
@@ -113,6 +114,7 @@ body #maildisplay {
   height: 100vh;
   background-color: var(--vert);
   z-index: 5;
+  overflow-x: hidden;
 }
 body #maildisplay #hautmail {
   width: 100%;
