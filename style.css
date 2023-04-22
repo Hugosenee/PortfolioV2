@@ -81,6 +81,7 @@ body #burgerdisplay #hautburger span {
   color: transparent;
   transition: 0.2s;
   -webkit-text-stroke: 1px var(--gris);
+  font-family: "Varela Round", sans-serif;
 }
 body #burgerdisplay #hautburger span:hover {
   color: var(--gris);
@@ -126,10 +127,21 @@ body #maildisplay #hautmail span {
   color: transparent;
   transition: 0.2s;
   -webkit-text-stroke: 1px var(--gris);
+  font-family: "Varela Round", sans-serif;
 }
 body #maildisplay #hautmail span:hover {
   color: var(--gris);
   cursor: pointer;
+}
+body #maildisplay #mainmail {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #maildisplay #mainmail span {
+  font-size: 70px;
+  color: var(--gris);
 }
 body #home {
   height: 100vh;

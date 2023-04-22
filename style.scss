@@ -90,6 +90,7 @@ body {
         color: transparent;
         transition: 0.2s;
         -webkit-text-stroke: 1px var(--gris);
+        font-family: 'Varela Round', sans-serif;
       }
       span:hover{
         color: var(--gris);
@@ -135,10 +136,22 @@ body {
         color: transparent;
         transition: 0.2s;
         -webkit-text-stroke: 1px var(--gris);
+        font-family: 'Varela Round', sans-serif;
+
       }
       span:hover{
         color: var(--gris);
         cursor: pointer;
+      }
+    }
+    #mainmail{
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span{
+        font-size: 70px;
+        color: var(--gris);
       }
     }
   }
