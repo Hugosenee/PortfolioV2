@@ -139,6 +139,27 @@ body #home #maildisplay #hautmail span:hover {
   color: var(--gris);
   cursor: pointer;
 }
+body #home #maildisplay #mainmail {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+body #home #maildisplay #mainmail a {
+  font-size: 70px;
+  color: transparent;
+  text-decoration: none;
+  transition: 0.45s;
+  -webkit-text-stroke: 1px var(--gris);
+}
+body #home #maildisplay #mainmail a:hover {
+  color: var(--gris);
+  transform: scale(1.15);
+  cursor: pointer;
+}
 body #home #head {
   height: 10vh;
   width: 100%;
@@ -152,7 +173,7 @@ body #home #head img {
   margin-top: 5px;
   margin-left: 10px;
   margin-right: 10px;
-  transition: 0.45s;
+  transition: 0.3s;
   cursor: pointer;
 }
 body #home #head img:hover {

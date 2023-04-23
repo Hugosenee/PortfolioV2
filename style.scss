@@ -148,6 +148,27 @@ body {
           cursor: pointer;
         }
       }
+      #mainmail{
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        a {
+          font-size: 70px;
+          color: transparent;
+          text-decoration: none;
+          transition: 0.45s;
+          -webkit-text-stroke: 1px var(--gris);
+        }
+        a:hover{
+          color: var(--gris);
+          transform : scale(1.15);
+          cursor: pointer;
+        }
+      }
     }
     #head{
       height: 10vh;
@@ -161,7 +182,7 @@ body {
         margin-top: 5px;
         margin-left: 10px;
         margin-right: 10px;
-        transition: 0.45s;
+        transition: 0.3s;
         cursor: pointer;
       }
       img:hover{
