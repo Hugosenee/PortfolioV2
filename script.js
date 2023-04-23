@@ -98,7 +98,6 @@ mail.addEventListener('click', () => {
 
 })
 
-
 mailclose.addEventListener('click', () => {
     displaymail.classList.toggle('showMail')
     displaymail.classList.toggle('removeMail')

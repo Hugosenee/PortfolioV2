@@ -26,37 +26,27 @@
 }
 
 .showBurger {
-  left: 0;
-  transition: left 0.6s ease-in-out;
+  top: 0;
+  transition: top 0.6s ease-in-out;
   position: fixed;
 }
 
 .removeBurger {
-  transition: left 0.4s ease-in-out;
+  transition: top 0.4s ease-in-out;
   position: absolute;
-  left: -110%;
+  top: -100%;
 }
 
 .showMail {
-  right: 0;
-  transition: right 0.6s ease-in-out;
+  top: 0;
+  transition: top 0.6s ease-in-out;
   position: fixed;
-}
-@media screen and (max-width: 450px) {
-  .showMail {
-    visibility: visible;
-  }
 }
 
 .removeMail {
-  transition: right 0.4s ease-in-out;
-  right: -110%;
+  transition: top 0.4s ease-in-out;
   position: absolute;
-}
-@media screen and (max-width: 450px) {
-  .removeMail {
-    visibility: hidden;
-  }
+  top: -100%;
 }
 
 .reveal {
@@ -73,18 +63,24 @@
 body {
   background-color: var(--gris);
   overflow-x: hidden;
+  width: 100vw;
 }
-body #burgerdisplay {
+body #home {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+body #home #burgerdisplay {
   width: 100%;
   height: 100vh;
   background-color: var(--vert);
   z-index: 5;
 }
-body #burgerdisplay #hautburger {
+body #home #burgerdisplay #hautburger {
   height: 10vh;
   width: 100%;
 }
-body #burgerdisplay #hautburger span {
+body #home #burgerdisplay #hautburger span {
   font-size: 70px;
   cursor: pointer;
   margin-left: 25px;
@@ -93,11 +89,11 @@ body #burgerdisplay #hautburger span {
   -webkit-text-stroke: 1px var(--gris);
   font-family: "Varela Round", sans-serif;
 }
-body #burgerdisplay #hautburger span:hover {
+body #home #burgerdisplay #hautburger span:hover {
   color: var(--gris);
   cursor: pointer;
 }
-body #burgerdisplay #mainburger {
+body #home #burgerdisplay #mainburger {
   height: 90vh;
   width: 100%;
   display: flex;
@@ -106,31 +102,31 @@ body #burgerdisplay #mainburger {
   align-items: center;
   gap: 10px;
 }
-body #burgerdisplay #mainburger a {
+body #home #burgerdisplay #mainburger a {
   font-size: 70px;
   color: transparent;
   text-decoration: none;
   transition: 0.45s;
   -webkit-text-stroke: 1px var(--gris);
 }
-body #burgerdisplay #mainburger a:hover {
+body #home #burgerdisplay #mainburger a:hover {
   color: var(--gris);
   transform: scale(1.15);
   cursor: pointer;
 }
-body #maildisplay {
+body #home #maildisplay {
   width: 100%;
   height: 100vh;
   background-color: var(--vert);
   z-index: 5;
 }
-body #maildisplay #hautmail {
-  width: 100%;
+body #home #maildisplay #hautmail {
   height: 10vh;
+  width: 100%;
   display: flex;
   justify-content: end;
 }
-body #maildisplay #hautmail span {
+body #home #maildisplay #hautmail span {
   font-size: 70px;
   cursor: pointer;
   margin-right: 25px;
@@ -139,12 +135,9 @@ body #maildisplay #hautmail span {
   -webkit-text-stroke: 1px var(--gris);
   font-family: "Varela Round", sans-serif;
 }
-body #maildisplay #hautmail span:hover {
+body #home #maildisplay #hautmail span:hover {
   color: var(--gris);
   cursor: pointer;
-}
-body #home {
-  height: 100vh;
 }
 body #home #head {
   height: 10vh;
