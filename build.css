@@ -269,7 +269,7 @@ body #home #main .container h2:nth-child(2) {
 }
 body #bottom {
   width: 100%;
-  height: 310vh;
+  height: 303vh;
   display: flex;
   flex-direction: column;
 }
@@ -478,11 +478,6 @@ body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #haut
 body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #hautProjects div img {
   width: 100%;
   height: 50%;
-  -webkit-filter: grayscale(100%);
-  transition: 0.3s;
-}
-body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #hautProjects div:hover img {
-  -webkit-filter: grayscale(0%);
 }
 body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #basProjects {
   height: 50%;
@@ -495,15 +490,17 @@ body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #basP
   width: 250px;
   border: 1px solid var(--noir);
   overflow: hidden;
+  background-color: black;
 }
 body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #basProjects div img {
-  width: auto;
-  height: 100%;
-  -webkit-filter: grayscale(100%);
-  transition: 0.3s;
+  width: 100%;
+  height: 50%;
 }
-body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #basProjects div:hover img {
-  -webkit-filter: grayscale(0%);
+body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #basProjects #tcoach {
+  background-color: #252525;
+}
+body #bottom #projects #showProjectsTitre #gaucheProjects #displayProjects #basProjects #chateau {
+  background-color: #FFE4C4;
 }
 body #bottom #projects #showProjectsTitre #droiteProjects {
   width: 35%;
@@ -522,7 +519,10 @@ body #bottom #projects #showProjectsTitre #droiteProjects p span {
   color: transparent;
   -webkit-text-stroke: 1px var(--noir);
 }
-body #bottom #projects #showProjectsTitre #droiteProjects div {
+body #bottom #projects #showProjectsTitre #droiteProjects a {
+  text-decoration: none;
+}
+body #bottom #projects #showProjectsTitre #droiteProjects a div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -530,20 +530,146 @@ body #bottom #projects #showProjectsTitre #droiteProjects div {
   position: relative;
   cursor: pointer;
 }
-body #bottom #projects #showProjectsTitre #droiteProjects div span {
+body #bottom #projects #showProjectsTitre #droiteProjects a div span {
   color: var(--vert);
   font-size: x-large;
 }
-body #bottom #projects #showProjectsTitre #droiteProjects div img {
+body #bottom #projects #showProjectsTitre #droiteProjects a div img {
   height: 20px;
   transition: 0.3s;
 }
-body #bottom #projects #showProjectsTitre #droiteProjects div:hover img {
+body #bottom #projects #showProjectsTitre #droiteProjects a div:hover img {
   transform: translateX(5px);
 }
 body #bottom #contacts {
   height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #bottom #contacts #contactsTitre {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+body #bottom #contacts #contactsTitre div {
+  width: 400px;
+  height: 90px;
+  position: relative;
+}
+body #bottom #contacts #contactsTitre div h2 {
+  font-size: 70px;
+  color: var(--vert);
+  text-align: center;
+  z-index: 2;
+}
+body #bottom #contacts #contactsTitre div hr {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  border: 2px solid var(--noir);
+  bottom: 0px;
+  right: 0;
+}
+body #bottom #contacts #formContact {
+  width: 100%;
+  height: 85%;
+  display: flex;
+  justify-content: center;
+}
+body #bottom #contacts #formContact form {
+  height: 100%;
+  width: 80%;
+}
+body #bottom #contacts #formContact form input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid var(--noir);
+  background-color: var(--gris);
+  font-size: larger;
+}
+body #bottom #contacts #formContact form input:focus {
+  outline: none;
+}
+body #bottom #contacts #formContact form #hautForm {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+body #bottom #contacts #formContact form #hautForm #name {
+  width: 40%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body #bottom #contacts #formContact form #hautForm #name label {
+  font-size: x-large;
+  color: var(--vert);
+}
+body #bottom #contacts #formContact form #hautForm #name input {
+  width: 70%;
+}
+body #bottom #contacts #formContact form #hautForm #email {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body #bottom #contacts #formContact form #hautForm #email label {
+  font-size: x-large;
+  color: var(--vert);
+}
+body #bottom #contacts #formContact form #hautForm #email input {
+  width: 100%;
+}
+body #bottom #contacts #formContact form #basForm {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body #bottom #contacts #formContact form #basForm #message {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+body #bottom #contacts #formContact form #basForm #message label {
+  font-size: x-large;
+  color: var(--vert);
+}
+body #bottom #contacts #formContact form #basForm #message input {
+  width: 100%;
+}
+body #bottom #contacts #formContact form #basForm #envoyer {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #bottom #contacts #formContact form #basForm #envoyer button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 45px;
+  color: var(--noir);
+  font-size: x-large;
+  border: 2px solid var(--noir);
+  border-radius: 5px;
+  background-color: var(--gris);
+  cursor: pointer;
 }
 
 #bodyProjects header {
